@@ -1,0 +1,9 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672 # probably it is necessary to kill other process on this port
+    username: guest
+    password: guest
+
+queue:
+  name: hseQueue
