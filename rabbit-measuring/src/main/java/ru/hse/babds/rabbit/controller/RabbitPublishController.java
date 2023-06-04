@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.hse.babds.rabbit.service.QueueSender;
 
 @RestController
-public class PublishController {
+public class RabbitPublishController {
     @Autowired
     private QueueSender queueSender;
 

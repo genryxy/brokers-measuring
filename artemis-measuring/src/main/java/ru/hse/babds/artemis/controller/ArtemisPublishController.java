@@ -11,7 +11,7 @@ import ru.hse.babds.artemis.model.Person;
 import ru.hse.babds.artemis.service.ArtemisProducer;
 
 @Controller
-public class PublishController {
+public class ArtemisPublishController {
 
     @Autowired
     ArtemisProducer artemisProducer;

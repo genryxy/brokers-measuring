@@ -9,7 +9,7 @@ import ru.hse.babds.active.service.JmsProducerActive;
 import ru.hse.babds.active.model.Employee;
 
 @Controller
-public class PublishController {
+public class ActivePublishController {
 
     @Autowired
     JmsProducerActive jmsProducerActive;

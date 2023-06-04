@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ru.hse.babds.kafka.service.KafkaProducerService;
 
 @Controller
-public class PublishController {
+public class KafkaPublishController {
 
     @Autowired
     private KafkaProducerService kafkaProducerService;
