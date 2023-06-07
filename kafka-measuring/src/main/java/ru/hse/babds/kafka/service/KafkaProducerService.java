@@ -1,11 +1,13 @@
 package ru.hse.babds.kafka.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
+@Slf4j
 public class KafkaProducerService {
     private KafkaTemplate<String, String> kafkaTemplate;
 
@@ -24,9 +26,13 @@ public class KafkaProducerService {
 
             @Override
             public void onSuccess(SendResult<String, String> result) {
-                System.out.println("Sent message=[" + msg +
-                    "] with offset=[" + result.getRecordMetadata().offset() + "]"
-                );
+                long offset = result.getRecordMetadata().offset();
+                if (offset % 10 == 0) {
+                    log.info("offset: {}", offset);
+                }
+//                System.out.println("Sent message=[" + msg +
+//                    "] with offset=[" + result.getRecordMetadata().offset() + "]"
+//                );
             }
 
             @Override
