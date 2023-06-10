@@ -4,16 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import static ru.hse.babds.common.DataToSend.*;
 import ru.hse.babds.kafka.service.KafkaProducerService;
 
 @Controller
 public class KafkaPublishController {
-
-    private static String DATA_1_KB = "a".repeat(1000);
-    private static String DATA_10_KB = "a".repeat(10_000);
-    private static String DATA_100_KB = "a".repeat(100_000);
-    private static String DATA_1_MB = "a".repeat(1_000_000);
-    private static String DATA_10_MB = "a".repeat(10_000_000);
 
     @Autowired
     private KafkaProducerService kafkaProducerService;
