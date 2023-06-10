@@ -25,4 +25,13 @@ public class JmsProducerActive {
             log.error("Received Exception during send Message: ", e);
         }
     }
+
+    public void sendMessage(String data){
+        try{
+            log.info("Attempting Send message to Topic: "+ topic);
+            jmsTemplateActive.convertAndSend(topic, data);
+        } catch(Exception e){
+            log.error("Received Exception during send Message: ", e);
+        }
+    }
 }
