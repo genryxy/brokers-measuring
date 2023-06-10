@@ -15,14 +15,14 @@ public class ActiveMQConfig {
     private String brokerUrl;
 
     @Bean
-    public ConnectionFactory connectionFactoryActive(){
-        ActiveMQConnectionFactory activeMQConnectionFactory  = new ActiveMQConnectionFactory();
+    public ConnectionFactory connectionFactoryActive() {
+        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
         activeMQConnectionFactory.setBrokerURL(brokerUrl);
-        return  activeMQConnectionFactory;
+        return activeMQConnectionFactory;
     }
 
     @Bean
-    public JmsTemplate jmsTemplateActive(){
+    public JmsTemplate jmsTemplateActive() {
         JmsTemplate jmsTemplate = new JmsTemplate();
         jmsTemplate.setConnectionFactory(connectionFactoryActive());
         jmsTemplate.setPubSubDomain(true);  // enable for Pub Sub to topic. Not Required for Queue.
@@ -30,7 +30,7 @@ public class ActiveMQConfig {
     }
 
     @Bean
-    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory(){
+    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         factory.setConnectionFactory(connectionFactoryActive());
         factory.setPubSubDomain(true);

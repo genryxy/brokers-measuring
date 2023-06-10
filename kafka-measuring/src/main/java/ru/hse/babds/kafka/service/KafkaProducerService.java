@@ -23,23 +23,22 @@ public class KafkaProducerService {
         ListenableFuture<SendResult<String, String>> future =
             kafkaTemplate.send(stringTopic.name(), msg);
         future.addCallback(new ListenableFutureCallback<SendResult<String, String>>() {
-
             @Override
             public void onSuccess(SendResult<String, String> result) {
                 long offset = result.getRecordMetadata().offset();
                 if (offset % 10 == 0) {
                     log.info("offset: {}", offset);
                 }
-//                System.out.println("Sent message=[" + msg +
-//                    "] with offset=[" + result.getRecordMetadata().offset() + "]"
-//                );
+                log.info(
+                    "Sent message=[{}] with offset=[{}]",
+                    msg,
+                    result.getRecordMetadata().offset()
+                );
             }
 
             @Override
             public void onFailure(Throwable ex) {
-                System.out.println("Unable to send message=["
-                    + msg + "] due to : " + ex.getMessage()
-                );
+                log.error("Unable to send message=[{}] due to: {}", msg, ex.getMessage());
             }
         });
     }
