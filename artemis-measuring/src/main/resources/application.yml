@@ -7,3 +7,17 @@ artemis-mq:
 jms:
   queue:
     destination: demoHseQueue
+
+## Metircs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true

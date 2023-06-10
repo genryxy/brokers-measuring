@@ -1,3 +1,17 @@
 active-mq:
   broker-url: tcp://localhost:61616 # By default, ActiveMQ uses the TCP transport on port 61616
   topic: "hse-topic"
+
+## Metircs
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
