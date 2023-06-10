@@ -1,6 +1,4 @@
-package ru.hse.babds.active.utils;
-
-import ru.hse.babds.common.DataSize;
+package ru.hse.babds.common;
 
 public class CurrentSize {
     // It is useful only for an exclusive testing of a specific endpoint.

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import ru.hse.babds.active.model.Employee;
 import ru.hse.babds.active.service.JmsProducer;
-import ru.hse.babds.active.utils.CurrentSize;
+import ru.hse.babds.common.CurrentSize;
 import ru.hse.babds.common.DataSize;
 import static ru.hse.babds.common.DataToSend.*;
 

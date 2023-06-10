@@ -7,7 +7,7 @@ import javax.jms.TextMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
-import ru.hse.babds.active.utils.CurrentSize;
+import ru.hse.babds.common.CurrentSize;
 import static ru.hse.babds.common.utils.MeasureLogs.consumeToLog;
 
 @Component

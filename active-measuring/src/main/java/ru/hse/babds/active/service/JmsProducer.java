@@ -11,7 +11,7 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Component;
 import ru.hse.babds.active.model.Employee;
-import ru.hse.babds.active.utils.CurrentSize;
+import ru.hse.babds.common.CurrentSize;
 import static ru.hse.babds.common.utils.MeasureLogs.produceToLog;
 
 @Component
