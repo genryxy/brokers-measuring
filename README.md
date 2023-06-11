@@ -13,16 +13,17 @@ Comparative analysis of different message-brokers.
 | 10000    |  |  |  |  |  |
 
 **Results for ActiveMQ**  
+Problems with connection: java.net.BindException: Address already in use: no further information  
 10 threads  
 300 sec
 
 | size, kb | produced | size, gb | consumed | size, gb | comment |
 |----------|---------|--------|---|--------|---|
-| 1        | 348000 | 0,35  | 348000 | 0,35  |  | 
-| 10       | 340000 | 3,4   | 340000 | 3,4   |  |
-| 100      | 192500 | 19,25 | 191500 | 19,15 |  |
-| 1000     | 27300  | 27,3  | 8500   | 8,5   |  |
-| 10000    | 2770   | 27,7  | 600    | 6     | |
+| 1        |  |  |  |  |  | 
+| 10       |  |  |  |  |  |
+| 100      |  |  |  |  |  |
+| 1000     |  |  |   |  |  |
+| 10000    |  |  |   |  | |
 
 **Results for Artemis**  
 10 threads  
@@ -54,8 +55,8 @@ Comparative analysis of different message-brokers.
 
 | size, kb | produced | size, gb | consumed | size, gb | comment |
 |----------|---------|--------|---|--------|---|
-| 1        |  |  |  |  |  | 
-| 10       |  |  |  |  |  |
-| 100      |  |  |  |  |  |
-| 1000     |  |  |   |  |  |
-| 10000    |  |  |   |  | |
+| 1        | 1953000 | 1,95  | 49000 | 0,05 |  | 
+| 10       | 744500  | 7,45  | 99000 | 0,99 |  |
+| 100      | 106500  | 10,65 | 26500 | 2,65 |  |
+| 1000     | 10300   | 10,3  | 4300  | 4,3 |  |
+| 10000    | 960     | 9,6   | 900   | 9 | |
