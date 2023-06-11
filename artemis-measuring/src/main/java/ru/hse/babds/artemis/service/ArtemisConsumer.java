@@ -29,7 +29,7 @@ public class ArtemisConsumer {
     )
     public void receiveStringTopic(Message<String> message) {
         consumeToLog(counter, CurrentSize.DATA_SIZE);
-        log.info("Recieved Topic Message: " + message.getPayload());
+//        log.info("Recieved Topic Message: " + message.getPayload());
     }
 
 //    @JmsListener(destination = "${jms.queue.destination}")

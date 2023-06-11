@@ -34,7 +34,7 @@ public class ArtemisProducer {
     public void sendTopic(String msg) {
         produceToLog(counter, CurrentSize.DATA_SIZE);
         jmsTemplateArtemis.convertAndSend(destinationTopic, msg);
-        log.info("Send Message: " + msg);
+//        log.info("Send Message: " + msg);
     }
 
     public void send(Person p) {

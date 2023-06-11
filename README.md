@@ -30,6 +30,30 @@ Comparative analysis of different message-brokers.
 
 | size, kb | produced | size, gb | consumed | size, gb | comment |
 |----------|---------|--------|---|--------|---|
+| 1        | 336000 | 0,34 | 336000 | 0,34 |  | 
+| 10       | 336000 | 0,34 | 336000 | 0,34 |  |
+| 100      | 125000 | 12,5 | 125000 | 12,5 | 16 connection timeout errors |
+| 1000     | 24100  | 24,1 | 5100   | 5,1  |  |
+| 10000    | 2450   | 24,5 | 660    | 6,6  | |
+
+**Results for Redis**  
+10 threads  
+300 sec
+
+| size, kb | produced | size, gb | consumed | size, gb | comment |
+|----------|---------|--------|---|--------|---|
+| 1        |  |  |  |  |  | 
+| 10       |  |  |  |  |  |
+| 100      |  |  |  |  |  |
+| 1000     |  |  |   |  |  |
+| 10000    |  |  |   |  | |
+
+**Results for Rabbit**  
+10 threads  
+300 sec
+
+| size, kb | produced | size, gb | consumed | size, gb | comment |
+|----------|---------|--------|---|--------|---|
 | 1        |  |  |  |  |  | 
 | 10       |  |  |  |  |  |
 | 100      |  |  |  |  |  |
