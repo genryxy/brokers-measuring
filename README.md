@@ -4,13 +4,13 @@ Comparative analysis of different message-brokers.
 10 threads  
 300 sec  
 
-| size, kb | offset |total size, gb | comment |
-|----------|---------|---|---|
-| 1        | 3364000 | 3,36 |  |
-| 10       | 1090200 | 10,9 |  |
-| 100      | 513700  | 51,37 |  | 
-| 1000     | 28780   | 28,78 |  |
-| 10000    |         |   | |
+| size, kb | produced | size, gb | consumed | size, gb | comment |
+|----------|---------|--------|---|--------|---|
+| 1        | 3120000 | 3,12 | 3120000 | 3,12 |  | 
+| 10       | 840000 | 8,4 | 840000 | 8,4 |  |
+| 100      | 423000 | 42,3 | 423000 | 42,3 |  |
+| 1000     | 55600 | 55,6 | 26600 | 26,6 |  |
+| 10000    |  |  |  |  |  |
 
 **Results for ActiveMQ**  
 10 threads  
