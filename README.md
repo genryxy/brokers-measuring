@@ -60,3 +60,15 @@ Problems with connection: java.net.BindException: Address already in use: no fur
 | 100      | 106500  | 10,65 | 26500 | 2,65 |  |
 | 1000     | 10300   | 10,3  | 4300  | 4,3 |  |
 | 10000    | 960     | 9,6   | 900   | 9 | |
+
+**Results for ZeroMQ**  
+10 threads  
+300 sec
+
+| size, kb | produced | size, gb | consumed | size, gb | comment |
+|----------|---------|--------|---|--------|---|
+| 1        | 840000 | 0,84 | 840000 | 0,84 |  | 
+| 10       | 549000 | 5,49 | 549000 | 5,49 |  |
+| 100      |  |  |  |  |  |
+| 1000     |  |  |   |  |  |
+| 10000    |  |  |   |  | |

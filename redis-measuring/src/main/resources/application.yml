@@ -1,6 +1,8 @@
 redis:
   host: localhost
   port: 6379
+  string:
+    topic: hseString
   student:
     topic: hseStudentTopic
 
