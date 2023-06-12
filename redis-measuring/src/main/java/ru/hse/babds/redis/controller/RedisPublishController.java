@@ -25,7 +25,7 @@ public class RedisPublishController {
 
     @GetMapping("send/1kb")
     public ResponseEntity<String> publishMsg1Kb() {
-        CurrentSize.DATA_SIZE = DataSize.REDIS_KB_1;
+        CurrentSize.DATA_SIZE = DataSize.KB_1;
         stringProducer.send(DATA_1_KB);
         return ResponseEntity.ok("published");
     }

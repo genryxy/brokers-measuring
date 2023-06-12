@@ -43,11 +43,11 @@ Problems with connection: java.net.BindException: Address already in use: no fur
 
 | size, kb | produced | size, gb | consumed | size, gb | comment |
 |----------|---------|--------|---|--------|---|
-| 1        |  |  |  |  |  | 
-| 10       |  |  |  |  |  |
-| 100      |  |  |  |  |  |
-| 1000     |  |  |   |  |  |
-| 10000    |  |  |   |  | |
+| 1        | 283000 | 0,28 | 283000 | 0,28 |  | 
+| 10       | 241500 | 2,42 | 241500 | 2,42 |  |
+| 100      | 82500  | 8,25 | 82500  | 8,25 |  |
+| 1000     | 10300  | 10,3 | 10300  | 10,3 |  |
+| 10000    | 1070   | 10,7 | 960    | 9,6 | |
 
 **Results for Rabbit**  
 10 threads  
@@ -67,8 +67,8 @@ Problems with connection: java.net.BindException: Address already in use: no fur
 
 | size, kb | produced | size, gb | consumed | size, gb | comment |
 |----------|---------|--------|---|--------|---|
-| 1        | 840000 | 0,84 | 840000 | 0,84 |  | 
-| 10       | 549000 | 5,49 | 549000 | 5,49 |  |
+| 1        |  |  |  |  |  | 
+| 10       |  |  |  |  |  |
 | 100      |  |  |  |  |  |
 | 1000     |  |  |   |  |  |
 | 10000    |  |  |   |  | |

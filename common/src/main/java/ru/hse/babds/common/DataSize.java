@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum DataSize {
     KB_1(1000),
-    REDIS_KB_1(3000),
+//    REDIS_KB_1(3000),
     KAFKA_KB_1(10000),
     KB_10(500),
     REDIS_KB_10(1500),

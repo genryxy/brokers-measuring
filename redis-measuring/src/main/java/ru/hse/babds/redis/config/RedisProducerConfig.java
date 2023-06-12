@@ -9,12 +9,8 @@ import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
-//import redis.clients.jedis.JedisPoolConfig;
 import org.springframework.data.redis.serializer.RedisSerializer;
-import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
-import ru.hse.babds.redis.model.Student;
 
 @Configuration
 public class RedisProducerConfig {
@@ -29,24 +25,13 @@ public class RedisProducerConfig {
         RedisStandaloneConfiguration redisConfig = new RedisStandaloneConfiguration();
         redisConfig.setHostName(redisHostName);
         redisConfig.setPort(redisPort);
-//        JedisClientConfig clientConfig = DefaultJedisClientConfig.builder()
-//                               .socketTimeoutMillis(0)
-//                               .connectionTimeoutMillis(0)
-//                               .build();
         JedisClientConfiguration config = JedisClientConfiguration.builder()
-                                              .connectTimeout(Duration.ofSeconds(300))
-                                              .readTimeout(Duration.ofSeconds(300))
-                                              .usePooling()
-                                              .poolConfig(jedisPoolConfig())
-                                              .build();
-        JedisConnectionFactory connFactory = new JedisConnectionFactory(
-            redisConfig,
-            config
-        );
-//        connFactory.setTimeout(0);
-//        connFactory.setPoolConfig(jedisPoolConfig());
-//        connFactory.setUsePool(true);
-        return connFactory;
+            .connectTimeout(Duration.ofSeconds(300))
+            .readTimeout(Duration.ofSeconds(300))
+            .usePooling()
+            .poolConfig(jedisPoolConfig())
+            .build();
+        return new JedisConnectionFactory(redisConfig, config);
     }
 
     @Bean
@@ -60,18 +45,8 @@ public class RedisProducerConfig {
         conf.setTestWhileIdle(false);
         conf.setMaxWait(Duration.ofSeconds(60));
         conf.setMinEvictableIdleTimeMillis(0);
-//        conf.setTimeBetweenEvictionRunsMillis(30000);
-//        conf.setNumTestsPerEvictionRun(-1);
         conf.setFairness(true);
         return conf;
-//        jedisPoolConfig.setMaxTotal(Integer.parseInt("8"));
-//        jedisPoolConfig.setMaxIdle(0);
-//        jedisPoolConfig.setMinIdle(0);
-//        jedisPoolConfig.setMaxWait(Duration.ofSeconds(60));
-//        jedisPoolConfig.setTestOnBorrow(true);
-//        jedisPoolConfig.setTestOnReturn(true);
-//        jedisPoolConfig.setTestWhileIdle(true);
-//        return jedisPoolConfig;
     }
 
     @Bean
