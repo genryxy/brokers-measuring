@@ -7,23 +7,10 @@ Comparative analysis of different message-brokers.
 | size, kb | produced | size, gb | consumed | size, gb |
 |----------|---------|--------|---|--------|
 | 1        | 3120000 | 3,12 | 3120000 | 3,12 |
-| 10       | 840000 | 8,4   | 840000  | 8,4  |
-| 100      | 423000 | 42,3  | 423000  | 42,3 |
-| 1000     | 55600 | 55,6   | 26600   | 26,6 |
-| 10000    |  |  |  |  |  |
-
-**Results for ActiveMQ**  
-Problems with connection: java.net.BindException: Address already in use: no further information  
-10 threads  
-300 sec
-
-| size, kb | produced | size, gb | consumed | size, gb |
-|----------|---------|--------|---|--------|
-| 1        |  |  |  |  | 
-| 10       |  |  |  |  |
-| 100      |  |  |  |  |
-| 1000     |  |  |   |  |
-| 10000    |  |  |   |  |
+| 10       | 840000  | 8,4  | 840000  | 8,4  |
+| 100      | 423000  | 42,3 | 423000  | 42,3 |
+| 1000     | 55600   | 55,6 | 26600   | 26,6 |
+| 10000    | 7400    | 74   | 2500    | 25   |
 
 **Results for Artemis**  
 10 threads  
@@ -61,7 +48,7 @@ Problems with connection: java.net.BindException: Address already in use: no fur
 | 1000     | 10300   | 10,3  | 4300  | 4,3 |
 | 10000    | 960     | 9,6   | 900   | 9 |
 
-**Results for ZeroMQ??**  
+**Results for ...**  
 10 threads  
 300 sec
 
